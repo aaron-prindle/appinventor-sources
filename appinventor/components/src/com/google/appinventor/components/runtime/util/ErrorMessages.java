@@ -139,9 +139,14 @@ public final class ErrorMessages {
 
   // Repl Communication Errors
   public static final int ERROR_REPL_SECURITY_ERROR = 1801;
+  
+  // IOIO errors
+  public static final int ERROR_IOIO_DISCONNECT = 1901;
+  public static final int ERROR_IOIO_INTERRUPT = 1902;
+  public static final int ERROR_IOIO_INCOMPATIBLE = 1903;
 
-  // Please start the next group of error numbers at 1901.
-
+  //Please start the next group of error numbers at 2001.
+  
   // Mapping of error numbers to error message format strings.
   private static final Map<Integer, String> errorMessages;
   static {
@@ -176,6 +181,12 @@ public final class ErrorMessages {
         "http://twitter.com/oauth_clients/new");
     errorMessages.put(ERROR_TWITTER_EXCEPTION,
         "Twitter error: %s");
+    errorMessages.put(ERROR_IOIO_DISCONNECT,
+        "Connection to the IOIO board has been lost");
+    errorMessages.put(ERROR_IOIO_INTERRUPT,
+            "Communication has been interrupted");
+    errorMessages.put(ERROR_IOIO_INCOMPATIBLE,
+            "The IOIO board is incompatible.");
     errorMessages.put(ERROR_TWITTER_UNABLE_TO_GET_ACCESS_TOKEN,
         "Unable to get access token: %s");
     errorMessages.put(ERROR_TWITTER_AUTHORIZATION_FAILED,
